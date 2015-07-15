@@ -1,0 +1,75 @@
+h1, h2, h3, label {
+  color: #ecf0f1;
+}
+
+.lh42 {
+  line-height: 42px;
+}
+
+.white-bg {
+  background-color: #ecf0f1;
+}
+
+body {
+  background-color: #34495e;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+#chat {
+  height: 80vh;
+  word-wrap: break-word;
+  padding: 10px;
+  font-size: 20px;
+  overflow: auto;
+}
+
+.pt10 {
+  padding-top: 10px;
+}
+
+.pb10 {
+  padding-bottom: 10px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.system-message {
+  position: fixed;
+  bottom: 0px;
+  right: 10px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -k-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+}
+
+.online {
+  color: #f1c40f;
+}
+
+@media screen and (max-width: 750px) {
+
+  #chat {
+    height: 75vh;
+  }
+
+  .lh42 {
+    line-height: 10px;
+  }
+
+  .system-message {
+    right: 0px;
+  }
+
+}

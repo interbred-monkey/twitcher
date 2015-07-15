@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Da meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Twitcher</title>
+    <!-- /Da meta -->
+
+    <!-- Je script -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/js/socket.io.js"></script>
+    <script type="text/javascript" src="/js/chat.js"></script>
+    <!-- /Je script -->
+    
+    <!-- Si css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- /Si css -->
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-sm-8 col-xs-12">
+          <h1 class="inline-block">Twitcher<small id="status">Offline</small></h1>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <h3 class="glyphicon glyphicon-user lh42"></h3>
+          <h3 id="viewers" class="inline-block lh42">0</h3>
+          <h3 class="glyphicon glyphicon-heart lh42 ml10"></h3>
+          <h3 id="followers" class="inline-block lh42">0</h3>
+          <h3 class="glyphicon glyphicon-eye-open lh42 ml10"></h3>
+          <h3 id="views" class="inline-block lh42">0</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div id="chat" class="col-md-12 col-sm-12 col-xs-12 white-bg"></div>
+      </div>
+      <div class="row white-bg pt10 pb10">
+        <form id="chatfrm" class="form-horizontal">
+          <div class="col-md-11 col-sm-11 col-xs-10">
+            <input type="text" class="form-control" id="msg" placeholder="Write message...">
+          </div>
+          <div class="col-md-1 col-sm-1 col-xs-2">
+            <button type="submit" class=" form-control btn btn-default glyphicon glyphicon-send" aria-label="Send Message"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
