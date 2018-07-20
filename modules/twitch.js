@@ -5,7 +5,7 @@ var _       = require('underscore'),
     config  = require('./config/config.json');
 
 var twitch = function() {
-  
+
   var opts = {
     options: {
       debug: false,
@@ -13,7 +13,9 @@ var twitch = function() {
     },
     identity: {
       username: config.username,
-      password: config.password
+      password: config.password,
+      client_id: config.clientId,
+      secret: config.secret
     },
     channels: config.channels
   }
@@ -67,7 +69,7 @@ twitch.prototype.setup = function(callback) {
 
 twitch.prototype.sendMessage = function(params) {
 
-  if (!_.isObject(params) || !_.isString(params.channel) || _.isEmpty(params.channel) 
+  if (!_.isObject(params) || !_.isString(params.channel) || _.isEmpty(params.channel)
       || !_.isString(params.message) || _.isEmpty(params.message)) {
 
     return {error: "Invalid parameters supplied, a channel and message must be supplied", data: JSON.stringify(params, null, 2)};
@@ -89,7 +91,7 @@ twitch.prototype.addDebugListeners = function() {
   })
 
   this.client.addListener('connectfail', function() {
-    
+
     console.log('Failed to connect to twitch server');
 
   })
@@ -215,7 +217,7 @@ twitch.prototype.channelStats = function(channel, callback) {
       return callback("Invalid JSON response", b);
 
     }
-    
+
     // make a summary
     var ob = {
       status: "Offline",

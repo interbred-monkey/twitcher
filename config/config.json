@@ -1,5 +1,7 @@
 {
   "username": "interbred_monkey",
-  "password": "oauth:6zuk0hbc55f08fc35936hdcvyd8q3s",
-  "channels": ["interbred_monkey"]
+  "password": "oauth:emhgbp3cc09zsreqzvz8yh3s780hd8",
+  "channels": ["interbred_monkey"],
+  "clientId": "1hfdj91qrnmw5w73kduep32ecm06gw",
+  "secret": "rrrm2ig20a78p03lqz2uleaw93bjb8"
 }
